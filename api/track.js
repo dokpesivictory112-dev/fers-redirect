@@ -8,7 +8,12 @@ module.exports = async function(req, res) {
   const PIXEL_ID = '950535357880062';
   const ACCESS_TOKEN = 'EAGDaJTh2MZCIBRpZBTwrYPrUl4ZBO1w728i5rQC7SYCQdgoCwwSFuP4enKHaDA6XFz1IYcevAhGDhMeZCUQvzy9xLrOKjYsTEoPfRPa5ZAXEZAYpZCZBiHtCmGZCLwwo5sZCq0ZAiGMdxatp9p9ZB9mqMZB6LHe9R31VBSmEc9g1vUWSH42QiZCumxU1FnskKv8WiaLAZDZD';
 
-  const body = req.body;
+  let body;
+  try {
+    body = JSON.parse(req.body);
+  } catch (e) {
+    body = req.body;
+  }
 
   const payload = JSON.stringify({
     data: [
@@ -16,7 +21,7 @@ module.exports = async function(req, res) {
         event_name: body.event_name || 'Lead',
         event_time: body.event_time || Math.floor(Date.now() / 1000),
         action_source: 'website',
-        event_source_url: 'https://fersinnova.vercel.app',
+        event_source_url: 'https://project-6mebk.vercel.app',
         user_data: {
           client_user_agent: body.user_agent || '',
           client_ip_address: req.headers['x-forwarded-for'] || ''
