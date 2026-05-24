@@ -46,6 +46,18 @@
     });
   </script>
 </body>
+</html>      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        event_name: 'Lead',
+        event_time: Math.floor(Date.now() / 1000),
+        user_agent: navigator.userAgent,
+        referrer: document.referrer
+      })
+    }).catch(() => {}).finally(() => {
+      window.location.href = 'https://chat.whatsapp.com/DdjjarQyUNtAXRRQlzke3A';
+    });
+  </script>
+</body>
 </html>    }
   </style>
 </head>
