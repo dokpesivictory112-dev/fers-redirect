@@ -27,8 +27,7 @@ module.exports = async function(req, res) {
           client_ip_address: req.headers['x-forwarded-for'] || ''
         }
       }
-    ],
-    test_event_code: 'TEST69821'
+    ]
   });
 
   return new Promise((resolve) => {
