@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Loading...</title>
-
-  <!-- Facebook Pixel -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -15,20 +13,10 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-
     fbq('init', '950535357880062');
     fbq('track', 'Lead');
   </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=950535357880062&ev=Lead&noscript=1"/>
-  </noscript>
-  <!-- End Facebook Pixel -->
-
-  <style>
-    * { margin: 0; padding: 0; }
-    body { background: #fff; }
-  </style>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=950535357880062&ev=Lead&noscript=1"/></noscript>
 </head>
 <body>
   <script>
@@ -43,46 +31,7 @@
       })
     }).catch(() => {}).finally(() => {
       window.location.href = 'https://chat.whatsapp.com/DdjjarQyUNtAXRRQlzke3A';
-    });
-  </script>
-</body>
-</html>      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        event_name: 'Lead',
-        event_time: Math.floor(Date.now() / 1000),
-        user_agent: navigator.userAgent,
-        referrer: document.referrer
-      })
-    }).catch(() => {}).finally(() => {
-      window.location.href = 'https://chat.whatsapp.com/DdjjarQyUNtAXRRQlzke3A';
-    });
-  </script>
-</body>
-</html>    }
-  </style>
-</head>
-<body>
-  <div class="loader">
-    <div class="brand">Fers Innova</div>
-    <div class="spinner"></div>
-  </div>
-
-  <script>
-    fetch('/api/track', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        event_name: 'Lead',
-        event_time: Math.floor(Date.now() / 1000),
-        user_agent: navigator.userAgent,
-        referrer: document.referrer
-      })
-    }).catch(() => {}).finally(() => {
-      setTimeout(() => {
-        window.location.href = 'https://chat.whatsapp.com/DdjjarQyUNtAXRRQlzke3A';
-      }, 800);
     });
   </script>
 </body>
 </html>
-
